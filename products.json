@@ -1,0 +1,35 @@
+[
+  {
+    "id": "wd_20tb_bestbuy",
+    "name": "WD 20TB External HDD",
+    "url": "https://www.bestbuy.com/site/example-product-page",
+    "trigger": "price_below",
+    "threshold": 279.99,
+    "price_selector": "[data-testid='customer-price']"
+  },
+  {
+    "id": "tom_sachs_gps_black_listing_search",
+    "name": "Tom Sachs Nike GPS Black listing (search)",
+    "url": "https://store.tomsachs.com/search?q=general+purpose+shoe",
+    "trigger": "page_match_change",
+    "page_regex": "(FZ1363-002|NikeCraft:?\\s*General Purpose Shoe.*Black|General Purpose Shoe.*Black)",
+    "must_not_match_regex": "Sold out"
+  },
+  {
+    "id": "tom_sachs_gps_black_listing_home",
+    "name": "Tom Sachs Nike GPS Black listing (homepage)",
+    "url": "https://store.tomsachs.com/",
+    "trigger": "page_match_change",
+    "page_regex": "(FZ1363-002|NikeCraft:?\\s*General Purpose Shoe.*Black|General Purpose Shoe.*Black)"
+  },
+  {
+    "id": "tom_sachs_gps_black_product",
+    "name": "Tom Sachs Nike GPS Black product page",
+    "url": "https://store.tomsachs.com/products/fz1363-002",
+    "trigger": "stock_change",
+    "stock_regex": "(Add to cart|Buy now|Sold out|Unavailable)",
+    "in_stock_terms": ["add to cart", "buy now"],
+    "out_of_stock_terms": ["sold out", "unavailable"],
+    "disabled": true
+  }
+]
