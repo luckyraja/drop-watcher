@@ -33,7 +33,12 @@ jobs:
       - name: Run watcher
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-        run: python watcher.py
+        run: |
+          if [ -z "$SLACK_WEBHOOK_URL" ]; then
+            echo "SLACK_WEBHOOK_URL secret not configured, skipping."
+            exit 0
+          fi
+          python watcher.py
 
       - name: Commit updated state
         run: |

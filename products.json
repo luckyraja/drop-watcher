@@ -1,13 +1,5 @@
 [
   {
-    "id": "wd_20tb_bestbuy",
-    "name": "WD 20TB External HDD",
-    "url": "https://www.bestbuy.com/site/example-product-page",
-    "trigger": "price_below",
-    "threshold": 279.99,
-    "price_selector": "[data-testid='customer-price']"
-  },
-  {
     "id": "tom_sachs_gps_black_listing_search",
     "name": "Tom Sachs Nike GPS Black listing (search)",
     "url": "https://store.tomsachs.com/search?q=general+purpose+shoe",
